@@ -1,0 +1,120 @@
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+/* CSS Variables */
+:root {
+    --primary-font: "Silkscreen", cursive;
+    --primary-color: #055011; /*dark green*/
+    --secondary-color: #c1e2d67c; /*light green*/
+    --highlight-color: #8de645; /*lime green*/
+    --box-color: #ff0000; /*red*/
+}
+
+body {
+    font-family: var(--primary-font);
+    color: var(--primary-color);
+    text-align: center;
+    margin: 20px;
+    background-color: var(--secondary-color);
+  }
+  
+  #heading {
+    color: var(--highlight-color);
+    background-color: black;
+  }
+
+  #gameArea {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.555);
+    border: 20px solid var(--primary-color);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  #box {
+    width: 50px;
+    height: 50px;
+    background-color: var(--highlight-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #countdown {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    font-weight: bold;
+    display: none;
+    color: var(--highlight-color);
+  }
+  
+  #score, #timer {
+    font-size: 20px;
+    margin: 10px;
+  }
+  
+  button {
+    background-color: var(--highlight-color);
+    padding: 12px 24px;
+    font-size: 18px;
+    font-family: var(--primary-font);
+    border-radius: 8px;
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+  #highScores {
+    position: relative;
+    width: 300px;
+    height: 180px;
+    margin: 20px auto;
+    color: var(--highlight-color);
+    background-color: black;
+    overflow: hidden;
+  }
+  
+  #scoreList {
+    list-style-type: none;
+    padding-right: 30px;
+  }
+
+  footer {
+    color: var(--primary-color);
+    background-color: white;
+}
+
+#social-networks {
+  text-align: center;
+  padding-top: 12px;
+  padding-right: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  list-style-type: none;
+}
+
+#social-networks i {
+  font-size: 300%;
+  color: var(--primary-color);
+}
+
+/*Media queries*/
+/* Small devices (mobiles, 320 px and up) */
+@media screen and (max-width: 320px) {
+  #gameArea,
+  #highScores {
+    max-width: 280px;
+  }
+}
